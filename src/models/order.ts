@@ -1,4 +1,4 @@
-import IOrder from '../interfaces/Order';
+import { IOrder } from '../interfaces/Order';
 import connection from './connection';
 
 const getAll = async (): Promise<IOrder[]> => {

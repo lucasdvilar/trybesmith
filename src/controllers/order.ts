@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-import order from '../services/order';
+import OrderService from '../services/order';
 
 const getAll = async (_req: Request, res: Response) => {
-  const ordersWithProducts = await order.getAll();
+  const ordersWithProducts = await OrderService.getAll();
   res.status(200).json(ordersWithProducts);
 };
 
