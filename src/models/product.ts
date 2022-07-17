@@ -14,7 +14,13 @@ const create = async (product: IProduct): Promise<IProduct> => {
   return { id: createdProduct.insertId, ...product };
 };
 
+const update = async (productId: number, orderId: number) => {
+  const query = 'UPDATE Trybesmith.Products SET orderId = ? WHERE id = ?';
+  await connection.execute(query, [orderId, productId]);
+};
+
 export default {
   getAll,
   create,
+  update,
 };

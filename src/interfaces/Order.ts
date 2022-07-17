@@ -6,3 +6,8 @@ export interface IOrder {
 export interface IOrderWithProducts extends IOrder {
   productsIds: number[],
 }
+
+export interface IOrderInfo {
+  productsIds: number[],
+  userId: number,
+}
